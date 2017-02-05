@@ -9,11 +9,10 @@
 import UIKit
 import Alamofire
 
-let cached = NSCache<NSString, UIImage>()
-
 class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var posts:[Post] = []
+    var selectedPost:Post!
     var lastId: Int = 0
     
     @IBOutlet weak var tableView: UITableView!
@@ -23,13 +22,15 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if #available(iOS 10.0, *) {
             
-            Alamofire.request("https://cuu.herokuapp.com/api/offset/\(self.lastId)").responseData { response in
+            var urlLast: String = "https://cuu.herokuapp.com/api/articles/\(self.lastId)/recent"
+            
+            print(urlLast)
+            Alamofire.request(urlLast).responseData { response in
                 if let data = response.result.value, let jsonText: String = String(data: data, encoding: .utf8) {
                     
                     var newPosts: [Post] = []
-                    print(jsonText)
+                                        
                     newPosts = Cuu.serialize(jsonText: data)
-                    
                     self.posts = newPosts + self.posts
                     if ( newPosts.count != 0) {
                         self.lastId = newPosts.last!.articleId
@@ -60,7 +61,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let refresh = UIRefreshControl()
         refresh.backgroundColor = UIColor(red: 86/255, green: 67/255, blue: 144/255, alpha: 1)
         refresh.tintColor = UIColor.white
-        refresh.addTarget(self, action: #selector(pulledDown), for: .valueChanged)
+        refresh.addTarget(self, action: #selector(pulledDown), for: .valueChanged)                
         
         if #available(iOS 10.0, *) {
             self.tableView.refreshControl = refresh
@@ -89,6 +90,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.posts.count
     }
+        
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -111,11 +113,29 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let urlString:String = (thumbs[0]).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             
             cell.thumbnail.sd_setImage(with: URL(string: urlString))
+            cell.thumbnail.setShowActivityIndicator(true)
             cell.thumbnail.contentMode = .scaleAspectFill            
         }
     
         return cell
     }
     
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        self.selectedPost = self.posts[indexPath.row]
+        performSegue(withIdentifier: "articleSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "articleSegue") {
+            
+            let destinationVC: ArticleViewController = segue.destination as! ArticleViewController
+            
+            destinationVC.post = self.selectedPost
+            
+        }
+    }
     
 }

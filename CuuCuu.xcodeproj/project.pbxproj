@@ -11,11 +11,12 @@
 		479674E41E40806800DCDD10 /* Cuu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479674E31E40806800DCDD10 /* Cuu.swift */; };
 		479674E61E40809E00DCDD10 /* SafeJsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479674E51E40809E00DCDD10 /* SafeJsonObject.swift */; };
 		479674E91E4084B900DCDD10 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479674E81E4084B900DCDD10 /* Post.swift */; };
+		479C7BE61E46C58000D8E34D /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479C7BE51E46C58000D8E34D /* ArticleViewController.swift */; };
 		479EF8A81D867F5A00FCE1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EF8A71D867F5A00FCE1D1 /* AppDelegate.swift */; };
 		479EF8AA1D867F5A00FCE1D1 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EF8A91D867F5A00FCE1D1 /* HomeController.swift */; };
 		479EF8AD1D867F5A00FCE1D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479EF8AB1D867F5A00FCE1D1 /* Main.storyboard */; };
-		479EF8AF1D867F5A00FCE1D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479EF8AE1D867F5A00FCE1D1 /* Assets.xcassets */; };
 		479EF8B21D867F5A00FCE1D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479EF8B01D867F5A00FCE1D1 /* LaunchScreen.storyboard */; };
+		47B6FAEE1E47D30B00AC3879 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B6FAED1E47D30B00AC3879 /* Media.xcassets */; };
 		D847B73CD8327CD266ACD7F2 /* Pods_CuuCuu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824174185487861D98A882C8 /* Pods_CuuCuu.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,13 +26,14 @@
 		479674E51E40809E00DCDD10 /* SafeJsonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeJsonObject.swift; sourceTree = "<group>"; };
 		479674E81E4084B900DCDD10 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		479C7BE11E46B98100D8E34D /* CuuCuu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CuuCuu-Bridging-Header.h"; sourceTree = "<group>"; };
+		479C7BE51E46C58000D8E34D /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		479EF8A41D867F5A00FCE1D1 /* CuuCuu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuuCuu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479EF8A71D867F5A00FCE1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		479EF8A91D867F5A00FCE1D1 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		479EF8AC1D867F5A00FCE1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		479EF8AE1D867F5A00FCE1D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		479EF8B11D867F5A00FCE1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		479EF8B31D867F5A00FCE1D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47B6FAED1E47D30B00AC3879 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = ../Media.xcassets; sourceTree = "<group>"; };
 		824174185487861D98A882C8 /* Pods_CuuCuu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuuCuu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C865FA13A1D5242059DAAC7E /* Pods-CuuCuu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuuCuu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuuCuu/Pods-CuuCuu.debug.xcconfig"; sourceTree = "<group>"; };
 		C9223DEE43F9AB33699AECB1 /* Pods-CuuCuu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuuCuu.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuuCuu/Pods-CuuCuu.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +76,15 @@
 			name = pojos;
 			sourceTree = "<group>";
 		};
+		479C7BE41E46C56B00D8E34D /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				479EF8A91D867F5A00FCE1D1 /* HomeController.swift */,
+				479C7BE51E46C58000D8E34D /* ArticleViewController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
 		479EF89B1D867F5A00FCE1D1 = {
 			isa = PBXGroup;
 			children = (
@@ -96,13 +107,13 @@
 		479EF8A61D867F5A00FCE1D1 /* CuuCuu */ = {
 			isa = PBXGroup;
 			children = (
+				47B6FAED1E47D30B00AC3879 /* Media.xcassets */,
+				479C7BE41E46C56B00D8E34D /* controllers */,
 				479674E71E4084B000DCDD10 /* pojos */,
 				479674E21E40802300DCDD10 /* utils */,
 				479674DF1E407A5900DCDD10 /* cells */,
 				479EF8A71D867F5A00FCE1D1 /* AppDelegate.swift */,
-				479EF8A91D867F5A00FCE1D1 /* HomeController.swift */,
 				479EF8AB1D867F5A00FCE1D1 /* Main.storyboard */,
-				479EF8AE1D867F5A00FCE1D1 /* Assets.xcassets */,
 				479EF8B01D867F5A00FCE1D1 /* LaunchScreen.storyboard */,
 				479EF8B31D867F5A00FCE1D1 /* Info.plist */,
 			);
@@ -190,7 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				479EF8B21D867F5A00FCE1D1 /* LaunchScreen.storyboard in Resources */,
-				479EF8AF1D867F5A00FCE1D1 /* Assets.xcassets in Resources */,
+				47B6FAEE1E47D30B00AC3879 /* Media.xcassets in Resources */,
 				479EF8AD1D867F5A00FCE1D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +263,7 @@
 			files = (
 				479674E11E407A7300DCDD10 /* NewTableViewCell.swift in Sources */,
 				479674E41E40806800DCDD10 /* Cuu.swift in Sources */,
+				479C7BE61E46C58000D8E34D /* ArticleViewController.swift in Sources */,
 				479EF8AA1D867F5A00FCE1D1 /* HomeController.swift in Sources */,
 				479674E91E4084B900DCDD10 /* Post.swift in Sources */,
 				479EF8A81D867F5A00FCE1D1 /* AppDelegate.swift in Sources */,

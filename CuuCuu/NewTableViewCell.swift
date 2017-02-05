@@ -10,9 +10,9 @@ import UIKit
 
 class NewTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var thumbnail: UIImageView!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var thumbnail: UIImageView!    
     
+    @IBOutlet weak var title: UITextView!
     @IBOutlet weak var link: UILabel!
     
     @IBOutlet weak var category: UILabel!
